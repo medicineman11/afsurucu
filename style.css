@@ -1,4 +1,4 @@
-/* Reset some default styling */
+/* Reset default styling */
 * {
     margin: 0;
     padding: 0;
@@ -16,7 +16,7 @@ body {
     min-height: 100vh;
 }
 
-/* Container for centering */
+/* Main container to align content */
 .container {
     width: 1440px;
     height: 1024px;
@@ -61,10 +61,10 @@ body {
     font-weight: 400;
 }
 
-/* About page specific styling */
+/* Profile and Contact Information */
 .profile-section {
     position: absolute;
-    top: 326px;
+    top: 50px; /* Adjusted to align to top */
     left: 350px;
     display: flex;
     align-items: flex-start;
@@ -97,14 +97,39 @@ body {
     font-weight: 400;
 }
 
+/* Email link styling */
+.email-link {
+    text-decoration: none;
+    color: #000;
+}
+
+.email-link:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Tooltip for email link */
+.email-link[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    background: #000;
+    color: #fff;
+    font-size: 12px;
+    padding: 5px;
+    border-radius: 3px;
+    top: -25px;
+    left: 0;
+    white-space: nowrap;
+}
+
 /* CV Section */
 .cv-section {
     position: absolute;
-    top: 500px;
+    top: 250px; /* Positioned below contact info */
     left: 350px;
-    width: 1000px; /* Adjusted width to keep the CV within the canvas */
-    height: 400px;
-    background-color: #eee;
+    width: 930px;
+    height: 500px;
+    background-color: #f5f5f5; /* Lighter gray background */
     padding: 20px;
     overflow-y: auto;
     font-weight: 300;
