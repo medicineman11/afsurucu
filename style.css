@@ -1,4 +1,4 @@
-/* Reset some basic elements */
+/* Reset basic elements */
 * {
     margin: 0;
     padding: 0;
@@ -8,91 +8,60 @@
 /* Set font */
 body {
     font-family: "Century Gothic", Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
     background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-/* Header styling */
-header {
+/* Home Page Container */
+.home-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    width: 100%;
-    padding: 10px;
-    background-color: #f8f9fa;
+    align-items: center;
+    flex-grow: 1; /* This allows it to take up all the space except for the footer */
+    text-align: center;
+}
+
+/* Styling for Name and Navigation */
+.home-container h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.home-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.home-nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2em;
     font-weight: bold;
 }
 
-header nav a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: #333;
-    font-size: 18px;
-}
-
-header nav a:hover {
+.home-nav a:hover {
     text-decoration: underline;
 }
 
-/* Main content container */
-.content-container {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: center;
-    width: 100%;
-    max-width: 1000px;
-    margin-top: 20px;
-    padding: 20px;
-    gap: 20px;
-}
-
-/* Sidebar styling */
-.sidebar {
-    flex: 1;
-    max-width: 250px;
-    text-align: center;
-    background-color: #f0f0f0;
-    padding: 20px;
-    border-radius: 8px;
-}
-
-.sidebar img {
-    width: 100%;
-    border-radius: 8px;
-    margin-top: 10px;
-}
-
-/* CV content styling */
-.cv-content {
-    flex: 2;
-    padding: 20px;
-    overflow-y: auto;
-    max-height: calc(100vh - 150px);
-}
-
-/* Footer styling */
-footer {
-    width: 100%;
+/* Footer Styling */
+.home-footer {
     text-align: center;
     padding: 10px;
     background-color: #f8f9fa;
-    position: fixed;
-    bottom: 0;
-    left: 0;
+    width: 100%;
 }
 
-footer p {
+.home-footer p {
     font-size: 14px;
 }
 
-/* Center alignment for entire content */
-h1, h2, h3, h4, h5, h6, p, ul {
-    text-align: center;
-}
-
-.important-text {
-    font-weight: bold;
+/* For ensuring center alignment in all viewports */
+body, .home-container, .home-footer {
+    margin: 0;
+    padding: 0;
+    width: 100%;
 }
