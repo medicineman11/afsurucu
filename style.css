@@ -8,12 +8,18 @@
 /* Set font */
 body {
     font-family: "Century Gothic", Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ffffff;
 }
 
 /* Header styling */
 header {
     display: flex;
     justify-content: center;
+    width: 100%;
     padding: 10px;
     background-color: #f8f9fa;
     font-weight: bold;
@@ -30,16 +36,27 @@ header nav a:hover {
     text-decoration: underline;
 }
 
-/* Sidebar (fixed profile section) */
-.sidebar {
-    position: fixed;
-    top: 60px; /* Adjust this to leave room for the header */
-    left: 0;
-    width: 250px;
+/* Main content container */
+.content-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 20px;
     padding: 20px;
+    gap: 20px;
+}
+
+/* Sidebar styling */
+.sidebar {
+    flex: 1;
+    max-width: 250px;
+    text-align: center;
     background-color: #f0f0f0;
-    height: 100%;
-    overflow: auto;
+    padding: 20px;
+    border-radius: 8px;
 }
 
 .sidebar img {
@@ -50,34 +67,32 @@ header nav a:hover {
 
 /* CV content styling */
 .cv-content {
-    margin-left: 270px; /* Width of the sidebar + some padding */
+    flex: 2;
     padding: 20px;
-    overflow-y: scroll;
-    max-height: calc(100vh - 100px); /* Adjust height based on header/footer */
+    overflow-y: auto;
+    max-height: calc(100vh - 150px);
 }
 
 /* Footer styling */
 footer {
+    width: 100%;
     text-align: center;
     padding: 10px;
     background-color: #f8f9fa;
     position: fixed;
     bottom: 0;
-    width: 100%;
+    left: 0;
 }
 
 footer p {
     font-size: 14px;
 }
 
-/* Styling for bold headers */
-h1, h2, h3, h4, h5, h6 {
-    font-family: "Century Gothic", Arial, sans-serif;
-    font-weight: bold;
+/* Center alignment for entire content */
+h1, h2, h3, h4, h5, h6, p, ul {
+    text-align: center;
 }
 
-/* Styling for any other important sections */
 .important-text {
-    font-family: "Century Gothic", Arial, sans-serif;
     font-weight: bold;
 }
